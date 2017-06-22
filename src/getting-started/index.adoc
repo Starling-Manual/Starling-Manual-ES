@@ -19,7 +19,7 @@ include::hello-world.adoc[]
 
 == Resumen
 
-Ahora deberías tener una comprensión básica de Starling y las herramientas y recursos con los que vas a trabajar.
+Ahora deberías tener una comprensión básica de Starling, las herramientas y los recursos con los que vas a trabajar.
 Ya sabes como conseguir e instalar el Adobe AIR SDK, y ya elegiste la IDE que mejor se adapta a tus necesidades.
 La aplicación "Hello World" basada en Starling corroboró que todo está configurado correctamente.
 

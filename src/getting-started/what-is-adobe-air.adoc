@@ -1,46 +1,50 @@
-== What is Adobe AIR?
+== Qué es Adobe AIR?
 ifndef::imagesdir[:imagesdir: ../../img]
 
-Just a few years ago, Adobe's _Flash Player_ was omnipresent when browsing the web.
-At that time, it was basically the only choice when you wanted to create interactive or animated content for the web.
-Browsers had very limited capabilities when it came to video, sound, and animation; and the few features they had were plagued by browser incompatibilities.
-In short, it was a mess.
+Hace un par de años, Adobe's _Flash Player_ era omnipresente cuando navegabamos la web.
+En ese entonces, era básicamente la única opción que había para crear contenidos web dinámicos o animados.
+Los navegadores tenían capacidades muy limitadas en lo referente a video, sonido, y animación;
+y las pocas características que tenían estaban plagadas de incompatibilidades entre los mismos.
+En pocas palabras, era un desastre.
 
-That's why _Adobe Flash_ was so popular.
-It allowed designers and developers to create multimedia content in an intuitive authoring program (now called _Adobe Animate_), and ensured that it would look the same across all platforms.
-With _ActionScript 3_, it also featured a language that was both easy to learn and very powerful.
+Por eso es que _Adobe Flash_ era tan popular.
+Le permitía a los diseñadores y desarrolladores crear contenido multimedia en un programa de creación muy intuitivo (ahora llamado _Adobe Animate_), y eso aseguraba que se vería exactamente igual en todas las plataformas y navegadores soportados.
+Con _ActionScript 3_, también se disponía de un lenguaje que era a la vez fácil de aprender y muy poderoso.
 
-NOTE: _Flash_ was originally created by _Macromedia_, which was acquired by Adobe in 2005.
+NOTE: _Flash_ fue originalmente creado por _Macromedia_, esta compañía fue comprada por Adobe en 2005.
 
-Building on the popularity of its platform, Adobe realized that there was a demand to use the same technology for standalone applications that run outside the browser.
-That's what the _Adobe AIR_ runtime is for.
-Applications built with the _AIR SDK_ can be deployed as standalone applications that run on desktop (_Windows_, _macOS_) or mobile (_Android_, _iOS_).
-Its standard library is a superset of the one from Flash, so you can do anything in _AIR_ that you can do in _Flash_; but it also provides a huge number of additional APIs for things like file system access or window management.
+Basándose en la popularidad de su plataforma, Adobe se dió cuenta que había una demanda de los usuarios para usar la misma tecnología para aplicaciones independientes que corriesen fuera del navegador.
+Por eso existe el runtime de _Adobe AIR_.
+Aplicaciones creadas con el _AIR SDK_ se pueden implementar como ejecutables independientes [standalone] que corren en el escritorio (_Windows_, _macOS_) o en dispositivos móviles (_Android_, _iOS_).
 
-Of course, when you want to create a desktop application, you also need a way to create a graphical user interface, right?
-Since standard Flash was not very well suited for this task, this was moved into another SDK: _Flex_ (now _Apache Flex_).
-Flex also introduced an XML-based markup language (called _MXML_) to define user interface layouts.
+La librería estándar que contiene es un superconjunto de la que dispone Flash, por ende podés hacer cualquier cosa _AIR_ que se puede hacer en _Flash_; pero también provee un gran número de APIs adicionales para trabajar con el acceso al sistema de archivos o ventanas del sistema operativo.
 
-TIP: For Starling, you don't need _Flex_, just the _AIR SDK_.
+Por supuesto, cuando queres crear una aplicación de escritorio, también necesitas una forma de crear interfaces de usuario gráficas, no?
+Ya que la versión básica de Flash no era muy adecuada para esta tarea, decidieron moverlo a otro SDK:
+_Flex_ (ahora _Apache Flex_).
+Flex también introdujo un lenguaje de marcado basado en XML (llamado _MXML_) para definir diseños [layouts] de interfaces de usuario.
 
-=== The current state of Flash and AIR
+TIP: Para usar Starling, no necesitas _Flex_, sólo _AIR SDK_.
 
-At the time of its introduction, _AIR_ was part of a trend summarized under the term "Rich Internet Applications" (_RIA_) -- a buzzword that was all the rage in the late 2000's.
-There was a fierce competition between Adobe's _AIR_ and Microsoft's _Silverlight_ (as well as Sun's _JavaFX_).
-Fast forward to the present day, though, and it's apparent that the tides have turned.
-The winner is clearly _HTML5/JavaScript_, which is now the most popular technology stack when building applications with web technologies.
-Even Adobe followed the trend and is adding more and more _HTML5_ support to its products.
+=== El estado actual de Flash y AIR
 
-TIP: When it comes to software development, don't fall into the trap of blindly following the masses.
-For every problem, there are multiple solutions; some of them better suited than others.
-Pick the tool you are most comfortable with; a tool that gets out of your way and lets you focus on the software you want to create.
+En el momento de su debút,  _AIR_ era parte de una tendencia resumida en un término: "Aplicaciones de Internet Enriquecidads" ["Rich Internet Applications"] (_RIA_) -- una palabra que estaba de moda y hacía furor a finales de los años 2000.
 
-Even though it might be no longer the "cool kid" in town, the __AIR/Flash-__platform is still an extremely attractive platform to build software with:
+Había una feróz competencia entre Adobe's _AIR_ y Microsoft's _Silverlight_ (como también con Sun's _JavaFX_).
+Avanzando rápidamente al presente, es evidente como cambió la marea.
+El ganador es claramente _HTML5/JavaScript_, el cuál se convirtió en la tecnología más popular para crear aplicaciones con tecnologías web.
+Hasta Adobe se sumó a la tendencia y está agregando cada vez más y más soporte _HTML5_ a sus productos.
 
-* Compared to the fragmented world of _HTML5_, where trending libraries change faster than Lady Gaga's costumes, it is very mature and easy to use.
-* It comes with an extensive standard library that provides all the tools you need for day-to-day development.
-* The Flash plug-in, while clearly on the decline for general websites, is still the standard for browser gaming.
-  The majority of games on _Facebook_, for example, are still built with Flash.
-* Especially combined with _Starling_ and _Feathers_, it provides one of the smoothest paths for true cross-platform development (targeting all major desktop and mobile platforms with a single code-base).
+TIP: En lo que consierne a desarrollo de software, no caigas en la trampa de seguir ciegamente a las masas.
+Por cada problema, existen múltiples soluciones; algunas más convenientes que otras.
+Elegí la herramienta con la que te sientas más cómodo; una herramienta que no se interponga en tu camino y te deje enfocarte en el software que queres crear.
 
-Talking about _Starling_ ... how does it fit into this picture?
+Aunque quizás ya no sea tan popular, la plataforma __AIR/Flash__ sigue siendo extremadamente atractiva para crear aplicaciones:
+
+* Comparada al mundo fragmentado de _HTML 5_, donde las tendencias en librerías cambian más rápido que los trajes de Lady Gaga, es muy madura y fácil de usar.
+* Viene de fábrica con una extensa librería estándar que te provee de todas las herramientas que podes necesitar en el día a día.
+* El plug-in de Flash, aunque claramente este en caída para desarrollo de sitios web, siguie siendo el estándar para juegos en la web.
+ Por ejemplo, la mayoría de juegos en _Facebook_ siguen siendo creados en Flash.
+* Especialmente cuando lo combinas con _Starling_ y _Feathers_, te provee de uno de los caminos con menos baches para crear verdaderos desarrollos multiplataforma (apuntando a las mayores plataformas de escritorio y móviles con un único código fuente).
+
+Hablando de _Starling_ ... como calza en este panorama?

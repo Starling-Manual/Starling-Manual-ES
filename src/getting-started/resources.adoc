@@ -67,7 +67,7 @@ Simplemente navega a la carpeta del repositorio y `pull`:
 
 Eso es muchísimo más fácil que abrir el navegador y descargarte manualmente una nueva versión, no?
 
-[NOTA]
+[NOTE]
 ====
 Información adicional para usuarios _GIT_ avanzados:
 

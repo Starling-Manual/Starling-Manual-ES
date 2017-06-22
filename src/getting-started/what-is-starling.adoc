@@ -1,69 +1,68 @@
-== What is Starling?
+== Qué es Starling?
 ifndef::imagesdir[:imagesdir: ../../img]
 
-The _Starling Framework_ allows you to create hardware accelerated apps in _ActionScript 3_.
-The main target is the creation of 2D games, but Starling may be used for any graphical application.
-Thanks to _Adobe AIR_, Starling-based applications can be deployed to all major mobile and desktop platforms.
+El _Framework de Starling_ te permite crear aplicaciones aceleradas por hardware en _ActionScript 3_.
+El objetivo principal es la creación de juegos en 2D, pero podes usar Starling para cualquier tipo de aplicacion con gráficos.
+Gracias a _Adobe AIR_, aplicaciones basadas en Starling pueden ser desarrolladas para todas las grandes plataformas de escritorio y móviles.
 
-.This red little fella represents the logo of the Starling Framework.
-image::starling-bird.png["The Starling logo."]
+.Este pequeño amigo representa el logo del Framework de Starling.
+image::starling-bird.png["El logo de Starling."]
 
-While Starling mimics the classic display list architecture of _Adobe AIR/Flash_, it provides a much better performance: all objects are rendered directly by the GPU (using the _Stage3D_ API).
-The complete architecture was designed for working well with the GPU; common game development tasks were built right into its core.
-Starling hides _Stage3D_ internals from developers, but makes it easy to access them for those who need full performance and flexibility.
+Mientras que Starling imita la clásica arquitectura del display list de _Adobe AIR/Flash_, aporta un rendimiento muchísimo mejor: todos los objetos son renderizados ("dibujados") directamente por el GPU [la placa de vídeo] (usando el API _Stage3D_).
+La arquitectura completa fue diseñada para trabajar correctamente con el GPU; tareas comunes para el desarrollo de juegos han sido incluídas en el núcleo del framework.
+Starling esconde los detalles de _Stage3D_ de los programadores, pero deja fácilmente disponible el accesso para aquellos que necesiten de total rendimiento y flexibilidad.
 
-=== Why another display API?
+=== Por qué otro API para renderizar?
 
-As outlined above, Starling's API is very similar to the native Flash API, namely: the `flash.display` package.
-So you might ask: why go to all that effort to recreate Flash inside ... err, Flash?
+Como lo detallamos arriba, el API de Starling es muy similar al API nativo de Flash, llamado: el paquete `flash.display`.
+Así que podrías preguntarte: por qué tomarse todo ese esfuerzo de recrear Flash adentro de ... bueno, Flash?
 
-The reason is that the original `flash.display` API, with its flexible display list, vector capabilities, text rendering, filters, and whatnot, was designed in an era of desktop computers.
-Those computers had powerful CPUs, but (by modern standards) primitive, fixed-logic graphics hardware.
-Today's mobile hardware, on the other hand, has an almost reversed setup: a weak (i.e. battery-conserving) CPU with a very advanced graphics chip.
+La razón es el que el API original de `flash.display`, con su "display list" tan flexible, capacidad de mostrar gráficos vectoriales, renderización de texto, filtros, y todo eso, ha sido diseñado en la era de las computadoras de escritorio.
+Aquellas computadores tenían poderosos CPUs, pero (por los estándares modernos) primitivos, con placas gráficas fijadas a la tarjeta madre, en términos de hardware.
+Hoy en día el hardware de los dispositivos móviles, por el contrario, tiene prácticamente la configuración opuesta: un CPU débil (a fin de conservar la batería) con un chip de GPU muy avanzado.
 
-The problem: it's extremely difficult (if not impossible) to change an API that was designed for pure CPU rendering to suddenly use the GPU efficiently.
-Thus, such attempts failed spectacularly, and the Flash plug-in is nowadays completely gone from browsers on phones and tablets.
+El problema: es extremadamente difícil (si no imposible) de cambiar un API que fue diseñada exclusivamente para renderización en CPU para que de repente use la GPU eficientemente.
+Por ende, todos los intentos fallaron dramáticamente, y hoy en día el plug-in de Flash ha desaparecido completamente de los navegadores web en teléfonos y tabletas.
 
-To its credit, Adobe was very aware of this issue.
-That's why, back in 2011, they introduced a low level graphics API called _Stage3D_.
-That API is decidedly low-level; it's basically a wrapper of _OpenGL_ and _DirectX_, allowing developers to access the raw power of the GPU.
+Adobe era muy conciente de este problema.
+Por eso, en el 2011, introdujeron un API gráfico de bajo nivel llamado _Stage3D_.
+Esa API es definiticamente bajo-nivel; es básicamente un envoltorio de _OpenGL_ y _DirectX_, permitiéndole a los desarrolladores acceder al poder crudo de la GPU.
 
-The problem: such a low-level API didn't help users of the classic display list much, at least not right away.
-The _Stage3D_ API is as low-level as it gets, so it's nothing a typical developer can (or should!) directly work with when creating an app or game.
-Clearly, Adobe needed a more high-level API, built on top of _Stage3D_, but as easy to use as `flash.display`.
+El problema: un API de tan bajo nivel no ayudaba a los usuarios con su preconocimientos del clásico display list, al menos no de inmediato.
+El API de _Stage3D_ es tan bajo nivel como se puede hacer, así que no tiene nada que ver con lo que un clásico desarrollador puede (o debería!) usar directamente para trabajar en una app o juego.
+Claramente, Adobe necesitaba un API de alto nivel, más familiar para los programadores, creada encima de _Stage3D_, pero fácil de usar como el `flash.display`.
 
-Well ... this is where Starling enters the stage (pun intended)!
-It was designed from ground up for _Stage3D_, while mimicking the classic Flash API as much as possible.
-This makes it possible to fully leverage today's powerful graphics hardware, while using concepts countless developers are already familiar with.
+Bueno ... aca es donde Starling entra en escena!
+Fue diseñado desde el principio para _Stage3D_, tratando de imitar lo más posible el clásico API de Flash.
+Esto permite utilizar al máximo el poder gráfico del hardware disponible hoy en día, mientras usa los conceptos que son familiares para incontables programadores.
 
-Adobe could have made such an API themselves, of course.
-However, monolithic APIs built by big companies have the tendency to become big and inflexible.
-A small open source project, on the other hand, powered by a community of equal-minded developers, can act much more swiftly.
-That's the insight that led _Thibault Imbert_, product manager of the _Flash_ and _AIR_ platforms in 2011, to initiate the Starling project.
+Por supuesto, Adobe podría haber hecho esta API ellos mismos.
+Pero, APIs de antaño creadas por grandes compañías tienden a convertise en gigantes e inflexibles paquetes de clases.
+Un pequeño proyecto de código abierto, por otro lado, con soporte de una comunidad de desarrolladores que piensan igual, puede actuar mucho más eficientemente.
+Esta es la visión que llevó a _Thibault Imbert_, generente del producto de las plataformas _Flash_ y _AIR_ en 2011, a iniciar el proyecto Starling.
 
-To this day, Starling is funded and supported by Adobe.
+Al día de hoy, Starling es fundada y financiada por Adobe.
 
-TIP: There is an interesting blog article in which one of Adobe's engineers describes the reasons for supporting Starling instead of providing an accelerated version of the classic display list.
-It's still available via http://tinyurl.com/why-starling[archive.org].
+TIP: Hay un artículo interesante en el cual uno de los ingenieros de Adobe describe la razón para dar soporte a Starling en vez de proveer un API del clásico display acelerada.
+Todavía esta disponible en http://tinyurl.com/why-starling[archive.org].
 
-=== Starling's philosophy
+=== La filosofía Starling
 
-One of the core aims of Starling was to make it as lightweight and easy to use as possible.
-In my opinion, an open source library should not only be easy to use -- it should also encourage diving into the code.
-I want developers to be able to understand what's going on behind the scenes; only then will they be able to extend and modify it until it perfectly fits their needs.
+Uno de los objetivos de Starling era hacerlo lo más liviano y fácil de usar como fuese posible.
+En mi opinión, una librería de código abierto no debería ser sólo fácil de usar -- debería motivarte a sumergirte en el código.
+Quiero que los desarrolladores sean capaces de entender que está pasando detrás de escena; sólo entonces podrán extender y modificar el código hasta que calce perfectamente con las necesidades de cada uno.
 
-That's why Starling's source is well documented and surprisingly concise.
-With a size of just about 15k lines of code, it's probably smaller than most games that are written with it!
+Por eso es que el código fuente de Starling está bien documentado y es sorprendentemente concizo.
+Con un tamaño de tan sólo 15000 líneas de código, es probablemente más corto que la mayoría de juegos que lo usan!
 
 [TIP]
 ====
-I really want to emphasize that: if you're one day stuck or confused why your code isn't working as expected, don't hesitate to step into the source code of Starling.
-Oftentimes, you'll quickly see what's going wrong, and you'll get a much better understanding of its internals.
+Realmente quiero hacer énfasis en esto: si un día te encontrás obfuscado o confundido porque tu código no está funcionando como debería, no dudes en mirar el código fuente de Starling.
+Muchas veces, vas a encontrar rápidamente qué está mal, y vas a tener un mejor entendimiento de cómo funciona internamente.
 ====
 
-Another important goal of Starling is, of course, its close affinity to the display list architecture.
-That's not only because I really like the whole idea behind the display list, but also to make it easy for developers to transition to Starling.
-
-Nevertheless, I was never trying to create a perfect duplicate.
-Targeting the GPU requires specific concepts, and those should shine through!
-Concepts like _Textures_ and _Meshes_ aim to blend in seamlessly with the original API, just as if it had always been designed for the GPU.
+Otro objetivo importante de Starling es, por supuesto, so cercana afinidad a la arquitectura del display list.
+Eso no se debe únicamente a que realmente me gusta toda el concepto detrás del display list, sino también para hacerle a los desarrolladores la trancisión más sencilla a Starling.
+De cualquier forma, nunca traté de crear un duplicado perfecto.
+Desarrollar para el GPU requiere conceptos muy específicos, y estos deberían brillar!
+Conceptos como _Textures_ y _Meshes_ apuntan a combinarse naturalmente con el API original, como si fuesen diseñados desde el principio para la GPU.

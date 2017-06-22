@@ -99,7 +99,7 @@ Eso debería arreglar el problema.
 
 Seguramente algún día, vas a querer embeber tu archivo SWF dentro de una página HTML.
 En ese caso, puedes arreglar el error cambiando el parámetro Flash `wmode` a `direct` en el archivo HTML que está embebiendo el archivo SWF.
-Tipicamente, esto significa que tiene que aplicar el siguiente cambio:
+Típicamente, esto significa que tenés que aplicar el siguiente cambio:
 
 [source, js]
 ----
