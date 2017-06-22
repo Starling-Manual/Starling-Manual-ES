@@ -1,33 +1,33 @@
-== Hello World
+== Hola Mundo
 ifndef::imagesdir[:imagesdir: ../../img]
 
-Phew, that was quite a lot of background information.
-It's time we finally get our hands dirty!
-And what better way to do that than a classical "Hello World" program.
-This manual wouldn't be complete without one, right?
+Wow, eso fue un montón de información.
+Es momento de ensuciarnos las manos!
+Y que mejor forma de hacerlo que un clásico programa "Hola Mundo".
+Este manual no estaría completo sin uno, no?
 
 === Checklist
 
-Here's a quick summary of the preparations you should already have made:
+Aquí tenemos un rápido resumen de las preparaciones que ya deberías hacer hecho:
 
-* Chosen and downloaded an IDE.
-* Downloaded the latest version of the _AIR SDK_.
-* Downloaded the latest version of the _Flash Player Projector_.
-* Downloaded the latest version of _Starling_.
-* Configured your IDE to use the correct SDK and player.
+* Elegir y descargar una IDE.
+* Descargar la última versión del _AIR SDK_.
+* Descargar la última versión del _Flash Player Projector_.
+* Descargar la última versión del _Starling_.
+* Configurar tu IDE para usar el SDK y reproductor correctos.
 
-Configuring the IDE and setting up a project is done slightly different in each IDE.
-To help you with that, I created a specific how-to for each IDE in the http://wiki.starling-framework.org/manual/[Starling Wiki].
-Please follow the appropriate tutorial before you continue.
+Configurar la IDE y crear/configurar un proyecto se hace de una forma sutilmente diferente en cada IDE.
+Para ayudarte con eso, he creado un guía para cada IDE en el http://wiki.starling-framework.org/manual/[Starling Wiki].
+Por favor sigue el tutorial adecuado antes de continuar.
 
-NOTE: Admittedly, all of those set-up procedures are a pain. But bear with me: you only need to do this very rarely.
+NOTE: Lo admito, todos esos procedimientos de configuración son tediosos. Pero ten paciencia: sólo necesitas hacerlo muy rara vez.
 
-=== Startup Code
+=== Código Inicial
 
-Create a new project or module in your IDE; I recommend you start with a _Flash Player_ project (target platform: _Web_) with the name "Hello World".
-As part of the initialization process, your IDE will also setup a minimal startup class for you.
-Let's open it up and modify it as shown below.
-(Typically, that class is named like your project, so exchange the class name below with the correct one.)
+Crea un nuevo proyecto o módulo en tu IDE; te recomiendo comenzar con un proyecto _Flash Player_ (target platform: _Web_) con el nombre "Hello World" ("Hola Mundo" en español).
+Como parte del proceso de inicialización, tu IDE va a crearte una clase inicial por vos.
+Vamos a abrirla y modifiquémosla como se muestra aquí abajo.
+(Típicamente, esa clase es nombrada como tu proyecto, así que cambia el nombre de la siguiente clase por el correcto.)
 
 [source, as3]
 ----
@@ -50,13 +50,13 @@ package
 }
 ----
 
-This code creates a Starling instance and starts it right away.
-Note that we pass a reference to the “Game” class into the Starling constructor.
-Starling will instantiate that class once it is ready.
-(It's done that way so you don't have to take care about doing stuff in the right order.)
+Este código crea una instancia Starling y la inicia inmediatamente.
+Prestá atención a que le pasamos una referencia de la clase "Game" al constructor de Starling.
+Starling va a instanciar esa clase una vez que este listo.
+(Está hecho de esta forma para que vos no te tengas que hacer cargo de hacer las cosas en el orden correcto.)
 
-That class first needs to be written, of course.
-Add a new class called `Game` to your project and add the following code:
+Esa clase primero necesita ser escrita, obviamente.
+Crea una nueva clase en tu proyecto llamada `Game` y agrega el siguiente código:
 
 [source, as3]
 ----
@@ -79,62 +79,61 @@ package
 }
 ----
 
-The class just displays a simple red quad to see if we've set up everything correctly.
+La clase sólo muestra un simple cuadrado rojo para ver si configuramos todo correctamente.
 
-IMPORTANT: Note that the Game class extends `starling.display.Sprite`, not `flash.display.Sprite`!
-This is crucial, because we're in the Starling world now.
-It's completely separate from the `flash.display` package.
+IMPORTANT: Observá que la clase Game extiende `starling.display.Sprite`, no `flash.display.Sprite`!
+Esto es crítico, porque estamos en el mundo Starling ahora.
+Está completamente separado del paquete `flash.display`.
 
-=== First Launch
+=== Primera Ejecución
 
-Now start up the project.
-For some of you, the output might be a little anticlimactic, because you are seeing an error message like this:
-
+Ahora arranca el proyecto.
+Para alguno de ustedes, el resultado podría ser medio deprimente, porque están viendo un mensaje de error como este:
 image::startup-error.png["Startup error message", pdfwidth='7cm']
 
-In that case, it was probably the browser that opened up instead of the standalone Flash Player.
-Check the run/debug configuration and make sure the _Flash Player Projector_ (debug version) is used, not the browser.
-That should fix the problem.
+En ese caso, probablemente fue el navegador web el que se abrió en vez del proyector Flash Player.
+Corroborá la configuración de ejecución/depuración [run/debug] y asegurate de que _Flash Player Projector_ (versión depurador) está siendo usada, y no el navegador.
+Eso debería arreglar el problema.
 
-==== Fixing the browser error
+==== Arreglando el error del navegador
 
-One day, though, you'll want to embed your SWF file into an HTML page.
-In that case, you can fix the error by changing the `wmode` Flash parameter to `direct` in the HTML file that's embedding the SWF file.
-Typically, this means you have to make the following change:
+Seguramente algún día, vas a querer embeber tu archivo SWF dentro de una página HTML.
+En ese caso, puedes arreglar el error cambiando el parámetro Flash `wmode` a `direct` en el archivo HTML que está embebiendo el archivo SWF.
+Tipicamente, esto significa que tiene que aplicar el siguiente cambio:
 
 [source, js]
 ----
-// find the following line ...
+// encuentra la siguiente línea ...
 var params = {};
 
-// ... and add that one directly below:
+// ... y agrega está inmediamente debajo:
 params.wmode = "direct";
 ----
 
-==== Fixing the AIR error
+==== Arreglando el error en AIR
 
-You will also see this error if you created an AIR application instead of an SWF file.
-In that case, you will need to edit the AIR application descriptor, which is probably called `HelloWorld-app.xml` or similar.
-Find the `renderMode` XML node (which might be commented out) and change its value to `direct`.
+También vas a ver este error si creaste una aplicación AIR en vez de un archivo SWF.
+En ese caso, vas a tener que editar el "AIR application descriptor", que probablemente se llame `HelloWorld-app.xml` o parecido.
+Busca el nodo XML `renderMode` (que podría estar comentado) y cambia el valor por `direct`.
 
 [source, xml]
 ----
-Find this:
+Busca esto:
 <!-- <renderMode></renderMode> -->
 
-Replace with this:
+Reemplázalo por esto:
 <renderMode>direct</renderMode>
 ----
 
-NOTE: What we've been doing here is allowing the runtime to access the GPU.
-Without those changes, _Stage3D_ is simply not accessible.
+NOTE: Lo que hemos hecho aquí is darle permiso al runtime para acceder al GPU.
+Sin esos cambios, _Stage3D_ no es accesible.
 
-=== Fixed Launch
+=== Ejecución Arreglada
 
-Congratulations! You have successfully compiled and run your first Starling based project.
+Felicitaciones! Haz compilado y ejecutado exitosamente tu primer proyecto basado en Starling.
 
-.Fantastic: a red Starling in a red box.
+.Fantástico: un Starling rojo en una caja roja.
 image::hello-world.png["Hello World", pdfwidth='7cm']
 
-Seriously: the most daunting part now lies behind you.
-Finally, we are ready to dig into a real project!
+Hablando en serio: La parte más desalentadora ya pasó.
+Finalmente, estamos listos para sambullirnos en un proyecto real!

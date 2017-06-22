@@ -13,24 +13,23 @@ Daniel Sperl <http://www.gamua.com[Gamua]>
 ifndef::ebook-format[:leveloffset: 1]
 
 // introduction
-
-The goal of this manual is to provide an extensive introduction to the http://www.starling-framework.org[Starling Framework].
-Starling is a cross-platform engine for _ActionScript 3_ that can be used for all kinds of applications, with a special focus on 2D games.
+El objetivo de este manual es proveer de una introducción extensiva a http://www.starling-framework.org[Starling Framework].
+Starling es un motor multiplataforma para _ActionScript 3_ que puede ser usado para todo tipo de aplicaciones, enfocándose especialmente en juegos 2D.
 
 ifdef::backend-html5[]
-TIP: Feel free to download a link:manual.pdf[PDF version] of this document.
+TIP: Puedes descargarte la link:manual.pdf[versión PDF] de este documento.
 endif::[]
 
-In this guide, you will learn:
+En esta guía vas a aprender:
 
-* The technologies Starling was built upon and the principles it follows.
-* How to pick an IDE and set it up for your first project.
-* The basic concepts like the display list, events and the animation system.
-* Advanced techniques, like how to tap into the potential of fragment and vertex programs.
-* How to get the best performance out of the framework.
-* What's required to get your game to run on mobile phones and tablets.
+* Las tecnologías con las que Starling fue creado y los principios que sigue.
+* Cómo elegir una IDE y configurarla para tu primer proyecto.
+* Los conceptos básicos como ??display list, eventos y el sistema de animación.
+* Técnicas avanzadas, como comenzar a entender el potencial de los programas fragment y vertex.
+* Cómo conseguir el mejor rendimiento del framework.
+* Qué se requiere para que tu juego corre en dispositivos móviles y tabletas.
 
-Keep on reading to dive right into it!
+Seguí leyendo para sumergirte en estos tópicos!
 
 [NOTE]
 .The Starling Handbook
@@ -38,14 +37,14 @@ Keep on reading to dive right into it!
 [.right, link=https://gamua.com/starling/handbook/]
 image::handbook-mockup.jpg[The Starling Handbook, 250]
 
-Are you looking for an extended version of this manual? That's the _Starling Handbook_.
-In addition to all you find here, it adds a plethora of additional information:
+Estás buscando una versión extendida de este manual? Eso es _Starling Handbook_.
+Además de todo lo que encontrarás aquí, agrega un montón de información extra:
 
-* Learn how to create a complete game from start to finish.
-* Get inspired by cookbook-like recipes for all tastes.
-* Learn first hand about Feathers and Starling Builder.
+* Aprende cómo crear un juego completo de principio a fin.
+* Encontrá inspiración en pequeñas "recetas" de código para todos gustos.
+* Aprende sobre Feathers y Starling Builder directamente de sus creadores.
 
-Find out all about it here: https://gamua.com/starling/handbook/[*The Starling Handbook*]
+Encuentra toda la información sobre el libro aquí: https://gamua.com/starling/handbook/[*The Starling Handbook*]
 ====
 
 // include main chapters
@@ -62,30 +61,31 @@ include::mobile-development/index.adoc[]
 
 :leveloffset: 0
 
-== Final Words
+== Palabras Finales
 
-=== Achievement Unlocked!
+=== Logro Cumplido! ??Achievement Unlocked!
 
-You have successfully finished working through the _Starling Manual_.
-We covered a lot of ground, didn't we?
-Pat yourself on the back and shave off that beard you've grown during the last hours.
+Haz completado exitosamente el _Starling Manual_.
+Hemos cubierto un montón de tópicos, no?
+Date un golpecito en la espalda y afeitate esa barba crecida en estas últimas horas.
 
-Congratulations!
+Felicitaciontes!
 
 image::impressive.jpg[Impressive]
 
-=== Getting Help
+=== Recibe Ayuda
 
-Want to share the knowledge you have just acquired?
-Or do you have any questions that haven't been answered yet?
-The Starling community is eager to help you!
-Pay us a visit at the official http://forum.starling-framework.org[Starling Forum].
+Quiéres compartir el conocimiento que haz adquirido?
+O tienes algunas preguntas que no han sido respondidas todavía?
+La comunidad Starling está ansiosa por ayudarte!
+Date una vuelta por el http://forum.starling-framework.org[Foro Oficial de Starling]
 
-=== Want more?
 
-If you want to become a true Starling master, don't forget to get yourself a copy of the https://gamua.com/starling/handbook/[Starling Handbook]!
-In addition to all the contents of this manual, it goes above and beyond to provide you with easy to follow recipes you can put to use in your own projects.
-And you're supporting the continuing development of Starling at the same time!
+=== Quieres más?
+
+Si quieres convertirte en un verdadero maestro en Starling, no te olvides de conseguirte una copia del [https://gamua.com/starling/handbook/[Starling Handbook]!
+Además de todos los contenidos de este manual, va más allá proporcionandote recetas muy fácil de seguir para que las puedas incluir en tus propios proyectos.
+Y estás dandole soporte a la continuidad del desarrollo de Starling al mismo tiempo!
 
 [link=https://gamua.com/starling/handbook/]
 image::handbook-mockup.jpg[The Starling Handbook]

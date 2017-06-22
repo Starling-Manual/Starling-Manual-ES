@@ -1,9 +1,9 @@
-= Getting Started
+= Una Guía Inicial
 
-This chapter will provide you with an overview of Starling and the technologies it builds upon.
-We will first take a brief look at the history of _Flash_ and _AIR_ and how Starling came into being.
-Then, we will evaluate the tools and resources that will help you when working with Starling.
-At the end of the chapter, you will have your first "Hello World" example up and running.
+Este capítulo te dará un vistazo general de Starling y las tecnologías con las que trabaja.
+Empezaremos por tomar un pequeño vistazo a la historia de _Flash_ y _AIR_ y cómo ha surgido Starling.
+Después, evaluaremos las herramientas y recursos que te ayudarán cuando trabajes con Starling.
+Al final del capítulo, tendrás corriendo tu primer ejemplo de "Hola Mundo".
 
 include::introduction.adoc[]
 
@@ -17,16 +17,16 @@ include::resources.adoc[]
 
 include::hello-world.adoc[]
 
-== Summary
+== Resumen
 
-You should now have a basic understanding of Starling and the tools and resources you will work with.
-You know how to acquire and install the Adobe AIR SDK, and you picked the IDE that fits your needs best.
-The Starling-powered "Hello World" application proved that everything is set up correctly.
+Ahora deberías tener una comprensión básica de Starling y las herramientas y recursos con los que vas a trabajar.
+Ya sabes como conseguir e instalar el Adobe AIR SDK, y ya elegiste la IDE que mejor se adapta a tus necesidades.
+La aplicación "Hello World" basada en Starling corroboró que todo está configurado correctamente.
 
 ifdef::target-handbook[]
-It's time to jump into your first real game!
+Es tiempo de encarar tu primer juego real!
 endif::[]
 
 ifdef::target-manual[]
-It's time to dive into the actual Starling API!
+Es tiempo de sumergirse en la API de Starling!
 endif::[]
