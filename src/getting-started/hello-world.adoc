@@ -113,8 +113,8 @@ params.wmode = "direct";
 ==== Arreglando el error en AIR
 
 También vas a ver este error si creaste una aplicación AIR en vez de un archivo SWF.
-En ese caso, vas a tener que editar el "AIR application descriptor", que probablemente se llame `HelloWorld-app.xml` o parecido.
-Busca el nodo XML `renderMode` (que podría estar comentado) y cambia el valor por `direct`.
+En ese caso, vas a tener que editar el "AIR application descriptor", que probablemente se llame `HelloWorld-app.xml` o algo parecido.
+Busca el nodo XML `renderMode` (podría estar comentado) y cambia el valor por `direct`.
 
 [source, xml]
 ----
@@ -125,7 +125,7 @@ Reemplázalo por esto:
 <renderMode>direct</renderMode>
 ----
 
-NOTE: Lo que hemos hecho aquí is darle permiso al runtime para acceder al GPU.
+NOTE: Lo que hemos hecho aquí es darle permiso al runtime para acceder al GPU.
 Sin esos cambios, _Stage3D_ no es accesible.
 
 === Ejecución Arreglada

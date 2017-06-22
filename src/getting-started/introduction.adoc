@@ -1,28 +1,28 @@
-== Introduction
+== Introducción
 
-First of all: welcome to the Starling community!
-Since its first release in 2011, developers from all over the world have created amazing games and apps with the help of the little red bird.
-It's great you want to join us!
+Antes que nada: bienvenido a la comunidad Starling!
+Desde su primera publicación en 2011, programadores de todo el mundo han creado juegos y aplicaciones sorprendentes con la ayuda del pequeño pájaro colorado.
+Es buenísimo que quieras acompañarnos!
 
-You have come to the right place: this manual will teach all you need to know.
-We'll cover everything from 'A' like _Asset Management_ to 'Z' like, ehm, _Zen-like coding_.
+Has venido al lugar correcto: este manual va a enseñarte todo lo que necesitas saber.
+Vamos a cubrir todo desde la 'A' de _Asset Management_ a la 'Z' de, mmm, _código-Zen_.
 
-I will start from scratch, beginning with a small game that will give you a feeling for the framework.
-Then we'll look at all the concepts in detail, including the display list architecture and Starling's animation system.
-Later chapters contain information for advanced Starling users, like how to write custom rendering code.
-Before you know it, you'll be a master of Starling!
+Comenzaré de cero, empezando con un pequeño juego que te dará una idea del framework.
+Después daremos un vistazo a todos los conceptos en detalle, incluyendo la arquitectura del display list y el sistema de animación de Starling.
+Capítulos posteriores contendran información para usuarios de Starling avanzados, por ejemplo, cómo escribir código para una renderización personalizada.
+Antes que te des cuenta, serás un maestro en Starling!
 
-However, there is one small precondition: you should have a basic understanding of _ActionScript 3_ (AS3).
-Fear not: if you have used any other object oriented language, you will get the hang of it quickly.
-There are numerous books and tutorials available that will get you started.
+Aunque, hay una pequeño pre-condición: Tiene que tener un conocimiento básico de _ActionScript 3_ (AS3).
+No temas: si ya usaste cualquier otro lenguaje orientado a objetos, le agarrarás la mano rápidamente.
+Hay muchos libros y tutoriales disponibles que te ayudarán con lo básico para empezar.
 
-If you ask me for one book in particular, I can recommend "Essential ActionScript 3" by _Colin Moock_.
-When I started to work with AS3, it taught me all the important nuts and bolts, and I'm still taking it off the bookshelf from time to time (especially with AS3's weird E4X syntax for XML processing).
+Si me preguntas por un libro en particular, te recomiendo "Essential ActionScript 3" by _Colin Moock_.
+Cuando empecé a trabajar con AS3, me enseño todas las cosas importantes, y todavía me encuentro tomándolo de mi biblioteca de vez en cuando (especialmente con la sintáxis E4X tan rara que tiene AS3 para procesar documentos XML).
 
 .AS3 vs. JS
 ****
-Did you know that _ActionScript 3_ was actually designed to become a successor to _JavaScript_?
-As you might know, _JavaScript_ is an implementation of the _ECMAScript_ language specification; and _ActionScript 3_ is based on _ECMAScript 4_.
-However, due to mostly political reasons, _ECMAScript 4_ was abandoned and never made it into browsers; today, _ActionScript 3_ remains the only implementation of the standard.
-Ironically, though, modern versions of _JavaScript_ look more and more like _ActionScript 3_.
+Sabías que _ActionScript 3_ fue de hecho diseñado para convertirse en el sucesor de _JavaScript_?
+Como deberías saber, _JavaScript_ es una implementación de la especificación de lenguaje _ECMAScript_; y _ActionScript 3_ está basado _ECMAScript 4_.
+Aunque, debido mayormente a razones políticas, _ECMAScript 4_ fue abandonado y no consiguió llegar a lor navegadores web; hoy en día, _ActionScript 3_ sigue siendo la única implementación de este estándar.
+Irónicamente, las versiones más modernas de _JavaScript_ se ven cada vez más similares a _ActionScript 3_.
 ****
