@@ -1,19 +1,20 @@
-= Basic Concepts
+= Conceptos Básicos
 
-Starling might be a compact framework, but it still boasts a significant number of packages and classes.
-It is built around several basic concepts that are designed to complement and extend each other.
-Together, they provide you with a set of tools that empower you to create any application you can imagine.
+Starling puede ser un framework compacto, pero aún así contiene un número considerable de paquetes y clases.
+Está armado sobre varios conceptos básicos que son diseñados para complementarse y extenderse mútuamente.
+Todos juntos, te proveen de un arsenal de herramientas que te permiten crear cualquier aplicación imaginable.
 
-Display Programming:: Every object that is rendered on the screen is a _display object_, organized in the _display list_.
-Textures & Images:: To bring pixels, forms and colors to the screen, you will learn to use the _Texture_ and _Image_ classes.
-Dynamic Text:: Rendering of dynamic text is a basic task in almost every application.
-Event Handling:: Communication is key! Your display objects need to talk to each other, and they can do that via Starling's powerful event system.
-Animation:: Bring some motion into the picture! There are different strategies to animate your display objects.
-Asset Management:: Learn how to load and organize all kinds of assets, like textures and sounds.
-Special Effects:: Effects and filters that will make your graphics stand out.
-Utilities:: A number of helpers to make your life easier.
+Programación de Visualización:: Cada objeto que es renderizado en pantalla es un _display object_ [objeto visual], organizado en un _display list_ [lista visual].
+Texturas e Imágenes:: Para traer los píxeles, formas y colores a la pantalla, necesitas aprender a usar las clases _Texture_ e _Image_.
+Texto Dinámico:: La renderización de texto dinámico es una tarea básica en casi toda
+aplicación.
+Manejo de Eventos:: La comunicación es clave! Tus objetos visuales necesitan hablar entre ellos, y lo pueden hacer gracias al poderoso sistema de eventos de Starling.
+Animación:: Usemos algo de movimiento! Exísten diferentes estratégias para animar tus objetos visuales.
+Manejo de Recursos:: Aprende cómo cargar y organizar todo tipo de recursos, como texturas y sonidos.
+Efectos Especiales:: Efectos y filtros que harán resaltar tus gráficos.
+Utilidades:: Una variedad de clases que te ayudarána a hacer tu vida más sencilla.
 
-We've got a lot of ground to cover, so, in the words of Super Mario: "Let's-a go!"
+Tenemos un montón de terreno por cubrir, por ende, citando a Super Mario: "Let's-a go!" [Arranquemos!]
 
 include::configuring-starling.adoc[]
 
@@ -39,10 +40,10 @@ include::sprite3d.adoc[]
 
 include::utilities.adoc[]
 
-== Summary
+== Resúmen
 
-You are now familiar with all the basic concepts of the Starling Framework.
-This is all the knowledge you need to get started with that game you have in your head, or with that app that's waiting to be created.
+Ya estás familiarizado con todos los conceptos básicos del Framework de Starling.
+Este es todo el conocimiento que necesitas para empezar con ese juego que te da vueltas en tu cabeza, o con esa aplicación que está esperando a ser creada.
 
-On the other hand, there are still a few tricks up the sleeves of our little bird (birds have sleeves?).
-If you're ready to jump into those advanced topics, please follow my lead.
+Pero considera que todavía hay varios trucos debajo de la manga de nuestro querido pajarito (los pájaros tiene mangas?).
+Si ya te sentís listo para saltar a esos tópicos avanzados, por favor, sígueme.
